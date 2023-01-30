@@ -1,0 +1,10 @@
+<app-layout>
+    <p>home works!</p>
+    <form [formGroup]="form" (submit)="save()" style="padding-left: 10%;">
+        <cinput fieldName="productName" label="نام محصول" [formGroup]="form"></cinput>
+        <br />
+        <button type="submit"
+            class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">save</button>
+    </form>
+
+</app-layout>
