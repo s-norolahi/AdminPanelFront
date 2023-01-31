@@ -5,8 +5,8 @@
         [placeholder]="label">
     <div *ngIf="formGroup.get(fieldName)!=null">
         <span *ngIf="formGroup.get(fieldName)?.invalid && (formGroup?.touched)">
-            لطفا مقدار صحیح وارد نمایید
+            <span>{{errorMessage}}</span>
         </span>
-        <span>{{errorMessage}}</span>
+
     </div>
 </div>
