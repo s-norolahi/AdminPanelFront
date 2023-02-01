@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.form = new FormGroup({
-      productName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      productName: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(6)]),
     });
   }
   save() {
