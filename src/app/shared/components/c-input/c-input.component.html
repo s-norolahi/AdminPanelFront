@@ -1,8 +1,9 @@
 <div [formGroup]="formGroup">
     <label [for]="fieldName">{{label}}</label>
     <input [id]="fieldName" [name]="fieldName" [type]="type" [formControlName]="fieldName" autocomplete="off"
-        [ngClass]="{'errorBox': hasError}"
-        class="relative block   rounded border border-gray-300 px-3 py-2  focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+        [ngClass]="{'errorBox': hasError}" class="relative block 
+          rounded border border-gray-300 px-3 py-2 
+           focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
         [placeholder]="label">
     <div *ngIf="formGroup.get(fieldName)!=null">
         <span *ngIf="formGroup.get(fieldName)?.invalid && (formGroup?.touched)">

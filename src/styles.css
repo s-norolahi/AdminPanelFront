@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.errorBox{
+    border-color:red;
+}
+.errorSpan{
+    color:red ;
+}

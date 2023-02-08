@@ -1,1 +1,13 @@
-<p>c-select works!</p>
+<div [formGroup]="formGroup">
+    <label [for]="fieldName" class="block text-sm font-medium text-gray-700">{{label}}</label>
+    <select [id]="fieldName" [name]="fieldName" [autocomplete]="fieldName" [formControlName]="fieldName" class="relative block rounded-md border border-gray-300 bg-white py-2 px-3 
+        shadow-sm focus:border-indigo-500 
+        focus:outline-none focus:ring-indigo-500 sm:text-sm" [ngClass]="{'errorBox': hasError}">
+        <option *ngFor="let item of items" [value]="item.id">{{item.title}}</option>
+    </select>
+    <div *ngIf="formGroup.get(fieldName)!=null">
+        <span *ngIf="formGroup.get(fieldName)?.invalid && (formGroup?.touched)">
+            <span class="errorSpan">{{errorMessage}}</span>
+        </span>
+    </div>
+</div>
